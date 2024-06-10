@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name         Rubish Dump Avatar Hunter
+// @namespace    http://tampermonkey.net/
+// @version      v0.1
+// @description  Automatically refreshes Rubish Dump looking for the avatar
+// @author       Ramsestone
+// @match        https://www.neopets.com/medieval/rubbishdump.phtml
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=neopets.com
+// ==/UserScript==
+
 const valid_items = [
     "Apple Core",
     "Blue Paint Brush",
@@ -53,13 +63,13 @@ function reloadPageAtRandomIntervals(min_time, max_time) {
     function getRandomInterval(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
     }
-    
+
     // Reloads page clicking on the keeper image
     function reload() {
         const keeper_img = document.querySelector("#content > table > tbody > tr > td.content > center:nth-child(1) > a > img")
         keeper_img.click()
     }
-  
+
     function scheduleNextReload() {
         const interval = getRandomInterval(min_time, max_time);
         var timeout_ID = setTimeout(() => {
@@ -72,10 +82,9 @@ function reloadPageAtRandomIntervals(min_time, max_time) {
             clearTimeout(timeout_ID)
         }
     }
-    
+
     scheduleNextReload();
   }
-  
+
   // Call main function
   reloadPageAtRandomIntervals(min_time, max_time);
-  
