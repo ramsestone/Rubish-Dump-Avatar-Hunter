@@ -6,7 +6,7 @@
 
 
 ## Disclaimer
-I'm not responsible for any actions taken against your account as a result of using this script. Use at your own risk. This script is designed to be safe, as it does not send any data to Neopets' servers; it simply automates user interactions on the site.
+**This script is designed to be safe** but I'm not responsible for any actions taken against your account as a result of using this script. Use at your own risk.
 
 ## Features
 - Automatically restocks at the Rubish Dump.
